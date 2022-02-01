@@ -5,6 +5,9 @@ The script does the following,
 1. Downloads the zip files from the links.txt file
 2. Unzips the zip files to a directory
 3. Removes the zip files
+4. Moves the spectrograms folder from
+"output_dir/data/wiai-release-spectrograms/processed/spectrograms/"
+to "output_dir/spectrograms"
 
 To call this script,
 
@@ -18,15 +21,12 @@ import argparse
 def parse_args():
     """ Parse arguments """
     parser = argparse.ArgumentParser(description="Prepare the data for further usage.")
+
     parser.add_argument(
         "--links_path", "-lp", type=str, help="Path to the links.txt file"
     )
     parser.add_argument(
-        "--output_dir", 
-        "-od", 
-        type=str,
-        default=os.path.join(os.getcwd(), "data"),
-        help="Path to the output directory"
+        "--output_dir", "-od", type=str, help="Path to the output directory"
     )
     args = parser.parse_args()
 
@@ -73,6 +73,15 @@ def main():
     download_files(args.links_path, args.output_dir)
     unzip_files(args.output_dir)
     remove_files(args.output_dir)
+
+    # moving the files from output_dir/data/wiai-release-spectrograms/processed/spectrograms/
+    # to output_dir/spectrograms and delete the old output_dir/data directory
+    os.system(
+        f"mv \
+        {args.output_dir}/data/wiai-release-spectrograms/processed/spectrograms/ \
+        {args.output_dir}/spectrograms"
+    )
+    os.system(f"rm -rf {args.output_dir}/data")
 
 
 if __name__ == "__main__":
