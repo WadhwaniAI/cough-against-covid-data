@@ -1,6 +1,7 @@
 # CoughAgainstCovid Official Dataset Repository 
+This is the official repository for accessing the data used by the project [CoughAgainstCovid](https://www.wadhwaniai.org/programs/cough-against-covid/).
 
-#### Data 
+### Data Description 
 Due to privacy constraints, we are not allowed to release the original raw audiowaveforms. Instead we release spectrograms, which are 2D time-frequency representations of the audio. To create the spectrograms from the raw audio waveform, we used the following transforms, 
 1. ToTensor
 2. Resample (44.1khz to 16khz)
@@ -12,7 +13,7 @@ Due to privacy constraints, we are not allowed to release the original raw audio
 
 We share the 2D numpy arrays (npy files) for all the audio sounds collected.
 
-#### Accessing/Downloading the Data
+### Accessing/Downloading the Data
 To download/access the spectrograms, 
 1. Sign the data sharing agreement [doc]()
 2. Fill the [form](https://docs.google.com/forms/d/e/1FAIpQLSdi-0HL6LLLCSMXK6rnBTs_MuD8E6lsOJbSD6EwH4bQQUBZ8A/viewform) and attach the signed doc file. 
@@ -31,7 +32,7 @@ Args:
 
 Running this script will download the data and unzip it to the output directory. The spectrograms should be present at `output_dir/spectrograms/`
 
-#### Using the Data
+### Using the Data
 To use the spectrograms, use the `viz.ipynb` notebook. You would need torch, jupyter, pandas, matplotlib and torchvision to use this notebook. 
 
 To set up a conda environment, run the following command in the terminal.
