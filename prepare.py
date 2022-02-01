@@ -22,9 +22,17 @@ def parse_args():
         "--links_path", "-lp", type=str, help="Path to the links.txt file"
     )
     parser.add_argument(
-        "--output_dir", "-od", type=str, help="Path to the output directory"
+        "--output_dir", 
+        "-od", 
+        type=str,
+        default=os.path.join(os.getcwd(), "data"),
+        help="Path to the output directory"
     )
     args = parser.parse_args()
+
+    # check if the links file exists
+    if not os.path.exists(args.links_path):
+        raise FileNotFoundError(f"{args.links_path} does not exist")
 
     # if output_dir does not exist, create it
     if not os.path.exists(args.output_dir):
@@ -48,7 +56,8 @@ def unzip_files(output_dir):
     """ Unzip the files """
     for f in os.listdir(output_dir):
         if f.endswith(".zip"):
-            os.system(f"unzip {f} -d {output_dir}")
+            path = os.path.join(output_dir, f)
+            os.system(f"unzip {path} -d {output_dir}")
 
 
 def remove_files(output_dir):
