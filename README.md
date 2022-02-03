@@ -15,11 +15,9 @@ We share the 2D numpy arrays (npy files) for all the audio sounds collected.
 
 ### Accessing/Downloading the Data
 To download/access the spectrograms, 
-1. Sign the data sharing agreement [doc]()
-2. Fill the [form](https://docs.google.com/forms/d/e/1FAIpQLSdi-0HL6LLLCSMXK6rnBTs_MuD8E6lsOJbSD6EwH4bQQUBZ8A/viewform) and attach the signed doc file. 
-3. Wait for approval, we generally respond in 2-3 days and longer if it's the weekend. Post Approval you would receive links to the zip files. 
-4. Create a text file with the one link per line and save it at a location of your choice.
-5. Run prepare.py to download and unzip the data.
+1. Fill the [form](https://docs.google.com/forms/d/e/1FAIpQLSdi-0HL6LLLCSMXK6rnBTs_MuD8E6lsOJbSD6EwH4bQQUBZ8A/viewform) and attach the signed doc file. You will receive a text file with the links in 10-15 mins.
+2. Download the text file, rename it (to say links.txt) and save it at a location where you can access it.
+4. Run prepare.py to download and unzip the data. (This script should take 1-2hrs depending upon the download speed)
 
 ```bash
 # To run prepare.py and download, unzip the data at ~/data
