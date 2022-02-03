@@ -20,7 +20,7 @@ To download/access the spectrograms,
 4. Run prepare.py to download and unzip the data. (This script should take 1-2hrs depending upon the download speed)
 
 ```bash
-# To run prepare.py and download, unzip the data at ~/data
+# To run prepare.py and download, unzip the data at ~/data, (wget would be used to download)
 python prepare.py -lp path_to_links_file -od ~/data
 
 Args:
