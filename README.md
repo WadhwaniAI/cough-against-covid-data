@@ -30,7 +30,7 @@ Args:
 
 Running this script will download the data and unzip it to the output directory. The spectrograms should be present at `output_dir/spectrograms/`
 
-### Using the Data
+<!-- ### Using the Data
 To use the spectrograms, use the `viz.ipynb` notebook. You would need torch, jupyter, pandas, matplotlib and torchvision to use this notebook. 
 
 To set up a conda environment, run the following command in the terminal.
@@ -41,7 +41,7 @@ conda install -c conda-forge matplotlib pytorch torchvision pandas jupyter
 
 # to start a jupyter notebook
 jupyter notebook
-```
+``` -->
 
 ### Metadata Details
 We provide a metadata file (`attributes.csv`) that contains supplementary information about the patients. The table contains the supplementary information present in the csv file.
