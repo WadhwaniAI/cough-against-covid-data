@@ -42,3 +42,47 @@ conda install -c conda-forge matplotlib pytorch torchvision pandas jupyter
 # to start a jupyter notebook
 jupyter notebook
 ```
+
+### Metadata Details
+We provide a metadata file (`attributes.csv`) that contains supplementary information about the patients. The table contains the supplementary information present in the csv file.
+
+| Attribute                           |              Column Name in CSV               | Description       |
+| ----------------------------------- | :-------------------------------------------: | ----------------- |
+| Patient Id                          |                  patient\_id                  | Unique Identifier |
+| Patient Age                         |             enroll\_patient\_age              | Continuous        |
+| Health Worker                       |            enroll\_health\_worker             | Discrete          |
+| Temperature                         |         enroll\_patient\_temperature          | Continuous        |
+| Travel History                      |            enroll\_travel\_history            | Discrete          |
+| Presence of Cough                   |                 enroll\_cough                 | Discrete          |
+| Presence of Shortness of Breath     |         enroll\_shortness\_of\_breath         | Discrete          |
+| Presence of Fever                   |                 enroll\_fever                 | Discrete          |
+| Days with Cough                     |           enroll\_days\_with\_cough           | Continuous        |
+| Days with Shortness of Breath (SOB) |   enroll\_days\_with\_shortness\_of\_breath   | Continuous        |
+| Days with Fever                     |           enroll\_days\_with\_fever           | Continuous        |
+| Contact with Covid Confirmed Case   | enroll\_contact\_with\_confirmed\_covid\_case | Discrete          |
+| Comorbidities                       |             enroll\_comorbidities             | Discrete          |
+| Patient Respiratory Rate            |      enroll\_patient\_respiratory\_rate       | Continuous        |
+| Smoking Habits                      |                enroll\_habits                 | Discrete          |
+| Cough Relief Measures               |        enroll\_cough\_relief\_measures        | Discrete          |
+| State                               |               testresult\_state               | Discrete          |
+| Test Facility                       |             testresult\_facility              | Discrete          |
+| Test Time                           |             testresult\_end\_time             | DateTime          |
+| Covid Result                        |        testresult\_covid\_test\_result        | Discrete          |
+| Covid Test Type                     |      testresult\_diagnostics\_test\_type      | Discrete          |
+| Audio Recording (aaaaaa sound)      |                aaaaa_recording                | File Name         |
+| Audio Recording (oooooo sound)      |                ooooo_recording                | File Name         |
+| Audio Recording (eeeeee sound)      |                eeeee_recording                | File Name         |
+| Audio Recording (a sound)           |                    a_sound                    | File Name         |
+| Audio Recording (e sound)           |                    e_sound                    | File Name         |
+| Audio Recording (o sound)           |                    o_sound                    | File Name         |
+| Audio Recording (Cough Sound 1)     |                    cough_1                    | File Name         |
+| Audio Recording (Cough Sound 2)     |                    cough_2                    | File Name         |
+| Audio Recording (Cough Sound 3)     |                    cough_3                    | File Name         |
+| Audio Recording (Breathing)         |                   breathing                   | File Name         |
+| Audio Recording (1 to 10 Counting)  |                 audio_1_to_10                 | File Name         |
+| Audio Recording (Room)              |                  room_sound                   | File Name         |
+| Audio Recording (Room Recording)    |                room_recording                 | File Name         |
+
+While we collect cough sounds for all the 7169 patients, we collect some outher sounds as well. The audio recording for them would exist only if their filename exists in this metadata file.
+
+## Dataset Paper will be Released Soon.
